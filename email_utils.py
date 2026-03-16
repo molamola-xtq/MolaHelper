@@ -4,6 +4,8 @@ from email.header import decode_header
 import email as email_lib
 from datetime import datetime
 import os
+import ssl
+
 
 
 class Email:
@@ -37,7 +39,11 @@ class EmailClient:
     def _connect(self):
         """建立IMAP连接"""
         if not self.server:
-            self.server = IMAPClient(self.imap_server, ssl=True, port=self.port)
+            ssl_context = ssl.create_default_context()
+            ssl_context.check_hostname = False
+            ssl_context.verify_mode = ssl.CERT_NONE
+
+            self.server = IMAPClient(self.imap_server, ssl=True, port=self.port, ssl_context=ssl_context)
             self.server.login(self.email, self.password)
             self.server.id_({"name": "IMAPClient", "version": "2.1.0"})
     

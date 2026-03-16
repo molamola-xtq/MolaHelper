@@ -1,6 +1,7 @@
 <div align="center">
 
-# 🤖 Mola Helper
+#  Mola Helper
+![alt text](images/log.png)
 
 **Your Intelligent Agent Assistant**
 
@@ -39,14 +40,14 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 ```env
 # LLM Configuration
-PROVIDER=ollama
-MODEL=qwen3:4b
-URL=http://localhost:11434/v1/chat/completions
+PROVIDER=siliconflow
+MODEL=
+URL=https://api.siliconflow.cn/v1/chat/completions
 API_KEY=
 
 # Email Configuration (Optional)
 EMAILS=your_email@example.com
-KEY=your_email_password
+KEY=your_email_password # SMTP authorization code
 IMAP=imap.example.com
 PORT=993
 ```

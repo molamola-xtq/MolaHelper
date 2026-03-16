@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🤖 Mola Helper
-
+![alt text](images/log.png)
 **你的智能 Agent 助手**
 
 *强大、可扩展的大语言模型 Agent 框架*
