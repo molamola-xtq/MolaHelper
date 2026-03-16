@@ -1,0 +1,72 @@
+# ===================== 基础通用规则 =====================
+# 注释：以 # 开头，不会生效
+# 忽略操作系统临时文件
+.DS_Store                # macOS 特有
+Thumbs.db                # Windows 特有
+*.swp                    # Vim 临时文件
+*.swo
+*~
+
+# 忽略编辑器配置（VSCode/PyCharm）
+.idea/                   # PyCharm 配置文件夹
+.vscode/                 # VSCode 配置文件夹
+*.iml
+*.idea/workspace.xml
+
+# ===================== Python 项目专属 =====================
+# 忽略虚拟环境（必加！避免提交依赖包）
+venv/
+env/
+*.env                    # 环境变量文件（含密钥/密码）
+.env.local
+.env.prod
+
+# 忽略编译文件
+__pycache__/             # Python 编译缓存
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 忽略日志文件
+logs/
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 忽略测试/覆盖率文件
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ===================== 可选：根据项目补充 =====================
+# 忽略数据文件（若有大文件/敏感数据）
+data/
+*.csv
+*.xlsx
+*.db
+
+# 忽略打包文件
+*.tar.gz
+*.zip
+*.rar
+
+# 忽略密钥/证书文件
+*.pem
+*.key
+*.crt
