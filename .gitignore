@@ -6,6 +6,8 @@ Thumbs.db                # Windows 特有
 *.swp                    # Vim 临时文件
 *.swo
 *~
+*.env
+__pycache__
 
 # 忽略编辑器配置（VSCode/PyCharm）
 .idea/                   # PyCharm 配置文件夹
